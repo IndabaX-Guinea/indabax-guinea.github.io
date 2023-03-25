@@ -47,6 +47,7 @@ h6 {
   height: 40px;
   border-radius: 4px;
   transition: all 0.4s;
+
 }
 
 .back-to-top i {
@@ -65,7 +66,10 @@ h6 {
 
 .back-to-top.active {
   visibility: visible;
+  /* padding-bottom: 30px; */
+  margin-bottom: 90px;
   opacity: 1;
+
 }
 
 /*--------------------------------------------------------------
