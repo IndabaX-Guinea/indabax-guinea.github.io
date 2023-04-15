@@ -11,6 +11,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  background: #000;
 }
 
 a {
@@ -524,6 +525,7 @@ h6 {
 section {
   padding: 60px 0;
   overflow: hidden;
+  background: #f5f5f5;
 }
 
 .section-title {
@@ -1229,7 +1231,7 @@ section {
 --------------------------------------------------------------*/
 .contact .info {
   width: 100%;
-  background: #fff;
+  /* background: #fff; */
 }
 
 .contact .info i {
@@ -1246,7 +1248,8 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.contact .info h4 {
+.contact .info h4,
+.contact .info h3 {
   padding: 0 0 0 60px;
   font-size: 22px;
   font-weight: 600;
@@ -1268,7 +1271,7 @@ section {
 
 .contact .php-email-form {
   width: 100%;
-  background: #fff;
+  /* background: #fff; */
 }
 
 .contact .php-email-form .form-group {
@@ -1485,7 +1488,8 @@ section {
   text-decoration: none;
 }
 
-#footer .footer-top h4 {
+#footer .footer-top h4,
+#footer .footer-top h3 {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
