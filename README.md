@@ -1,5 +1,2 @@
-# indabax-guinea.github.io
-
-IndabaX Guinea: Official website repository!
-
-[IndabaX Guinee offical website](https://indabax-guinea.github.io/)
+# conference
+Responsive HTML5 Bootstrap 3 template for Event Site
