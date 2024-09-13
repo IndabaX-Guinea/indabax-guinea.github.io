@@ -1,2 +1,4 @@
-# conference
-Responsive HTML5 Bootstrap 3 template for Event Site
+# Deep Learning IndabaX Guinee
+Official website repository of the IndabaX Guinee website.
+
+[Deep Learning IndabaX Guinee](https://indabax-guinea.github.io)
