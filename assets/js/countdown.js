@@ -1,10 +1,9 @@
 // assets/js/countdown.js
 // Set the date and time we're counting down to
-var countDownDate = new Date("August 30, 2025 08:00:00").getTime();
+var countDownDate = new Date("Aug 30, 2025 08:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
-
     // Get today's date and time
     var now = new Date().getTime();
 
@@ -17,15 +16,19 @@ var x = setInterval(function() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Display the result in the elements with ids
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
+    // Update the elements only if they exist
+    if (document.getElementById("days")) {
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+    }
 
     // If the count down is finished, write some text
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("countdown").innerHTML = "Coming Soon";
+        if (document.getElementById("countdown")) {
+            document.getElementById("countdown").innerHTML = "L'événement a commencé";
+        }
     }
 }, 1000);
