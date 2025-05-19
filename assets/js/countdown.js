@@ -1,6 +1,6 @@
 // assets/js/countdown.js
 // Set the date and time we're counting down to
-var countDownDate = new Date("October 26, 2024 08:00:00").getTime();
+var countDownDate = new Date("August 30, 2025 08:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
