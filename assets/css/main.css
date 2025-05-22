@@ -689,6 +689,102 @@ ul li {
     margin-left: 0;
   }
 }
+
+/* Hackathon Section Styles */
+.hackathon-section {
+  background: url(../images/backgrounds/conferences1.jpeg) no-repeat center center/cover;
+  color: #fff;
+  position: relative;
+  text-align: center;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.hackathon-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.hackathon-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hackathon-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+}
+
+.hackathon-description {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hackathon-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 40px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  background: #fff;
+  color: #000;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hackathon-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: #f8f9fa;
+  color: #000;
+  text-decoration: none;
+}
+
+.hackathon-text {
+  margin-right: 15px;
+}
+
+.hackathon-icon {
+  font-size: 28px;
+}
+
+@media (max-width: 768px) {
+  .hackathon-title {
+    font-size: 36px;
+  }
+  
+  .hackathon-description {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+  
+  .hackathon-button {
+    padding: 15px 40px;
+    font-size: 20px;
+  }
+}
+
 /* 
  * 6.0 Section
  */
