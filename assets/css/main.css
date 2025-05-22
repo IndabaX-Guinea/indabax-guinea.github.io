@@ -331,6 +331,46 @@ ul li {
   margin-top: -5px; /* Adjust vertical alignment */
 }
 
+.nav-register-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  padding: 8px 25px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-left: 15px;
+}
+
+.nav-register-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-decoration: none;
+}
+
+.nav-register-btn:active {
+  transform: translateY(1px);
+}
+
+/* Make button visible when navbar becomes solid */
+.navbar-solid .nav-register-btn {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+@media (max-width: 768px) {
+  .nav-register-btn {
+    margin: 10px 15px;
+    text-align: center;
+    display: inline-block;
+  }
+}
+
 /* 
  * 5.0 Site Header
  */

@@ -51,6 +51,10 @@
             <li><a data-scroll href="#schedule">Programme</a></li>
             <li><a data-scroll href="#facts">Infos</a></li>
             <li><a data-scroll href="#Hackathon">Hackathon</a></li>
+            <li><a href="https://forms.gle/your-google-form-url" class="nav-register-btn">
+              <span>Inscription</span>
+              <i class="ion-ios-arrow-right" style="margin-left: 8px;"></i>
+            </a></li>
           </ul>
         </div>
       </div>
@@ -83,75 +87,125 @@
     </div>
   </section>
 
-  <section id="facts" class="section">
+  <section id="facts" class="section facts-section">
     <div class="container">
+      <!-- Header -->
+      <div class="row">
+        <div class="col-md-12 text-center mb-5">
+          <h2 style="font-size: 36px; font-weight: 700; color: #333; margin-bottom: 20px;">Faits et Chiffres</h2>
+          <p style="font-size: 18px; color: #666; max-width: 800px; margin: 0 auto;">
+            La première édition d'IndabaX Guinée a marqué une étape importante dans le développement de l'IA en Guinée
+          </p>
+        </div>
+      </div>
+
+      <!-- Event Details Cards -->
       <div class="row mb-5">
-        <!-- Duration Section -->
+        <!-- Date & Location Card -->
         <div class="col-md-6">
-          <div class="duration-card" style="display: flex; align-items: center; margin-bottom: 30px;">
-            <div class="icon" style="margin-right: 20px;">
-              <i class="ion-ios-calendar-outline" style="font-size: 48px; color: #4CAF50;"></i>
+          <div style="background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 25px; height: 100%; display: flex; align-items: center;">
+            <div style="background: linear-gradient(135deg, #4CAF50, #45a049); color: white; padding: 15px; border-radius: 12px; margin-right: 20px;">
+              <i class="ion-ios-calendar-outline" style="font-size: 40px;"></i>
             </div>
-            <div class="content">
-              <h3 style="font-size: 24px; margin-bottom: 10px;">Édition 1 - 2024</h3>
-              <p style="font-size: 18px; color: #666;">Premier IndabaX en Guinée</p>
+            <div>
+              <h3 style="font-size: 24px; color: #333; margin-bottom: 10px; font-weight: 600;">Édition 2024</h3>
+              <p style="font-size: 16px; color: #666; margin: 0;">30-31 Mars 2024</p>
+              <p style="font-size: 16px; color: #666; margin: 0;">Université Gamal Abdel Nasser de Conakry</p>
             </div>
           </div>
         </div>
-        
-        <!-- Info Section -->
+
+        <!-- Description Card -->
         <div class="col-md-6">
-          <div class="info-card" style="display: flex; align-items: center;">
-            <div class="icon" style="margin-right: 20px;">
-              <i class="ion-ios-information-outline" style="font-size: 48px; color: #2196F3;"></i>
+          <div style="background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 25px; height: 100%; display: flex; align-items: center;">
+            <div style="background: linear-gradient(135deg, #2196F3, #1976D2); color: white; padding: 15px; border-radius: 12px; margin-right: 20px;">
+              <i class="ion-ios-information-outline" style="font-size: 40px;"></i>
             </div>
-            <div class="content">
-              <p style="font-size: 16px; color: #666; line-height: 1.6;">
-                La conférence a été organisée à l'Université Gamal Abdel Nasser de Conakry et a réuni des acteurs du monde de l'IA en Guinée.
+            <div>
+              <h3 style="font-size: 24px; color: #333; margin-bottom: 10px; font-weight: 600;">À Propos</h3>
+              <p style="font-size: 16px; color: #666; line-height: 1.6; margin: 0;">
+                Premier événement majeur dédié à l'intelligence artificielle en Guinée
               </p>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- Statistics Cards -->
       <div class="row">
-        <!-- Statistics Cards -->
-        <div class="col-md-12">
-          <div class="row" style="display: flex; justify-content: space-between;">
-            <!-- Attendees Card -->
-            <div class="col-sm-2 stat-card" style="background: linear-gradient(135deg, #9C27B0, #7B1FA2); color: white; padding: 20px; border-radius: 10px; text-align: center; margin: 10px;">
-              <h3 style="font-size: 28px; margin-bottom: 10px;">150+</h3>
-              <p style="font-size: 16px;">participants</p>
-              <small style="font-size: 12px;">connectés avec d'autres chercheurs et praticiens</small>
-            </div>
+        <!-- Participants -->
+        <div class="col-md-4">
+          <div style="background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 30px; text-align: center; height: 100%; margin-bottom: 20px; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #9C27B0, #7B1FA2);"></div>
+            <i class="ion-ios-people-outline" style="font-size: 48px; color: #9C27B0; margin-bottom: 20px;"></i>
+            <h3 style="font-size: 36px; font-weight: 700; color: #333; margin-bottom: 10px;">150+</h3>
+            <p style="font-size: 18px; color: #666; margin-bottom: 5px;">Participants</p>
+            <small style="color: #888; display: block;">Chercheurs et professionnels</small>
+          </div>
+        </div>
 
-            <!-- Speakers Card -->
-            <div class="col-sm-2 stat-card" style="background: linear-gradient(135deg, #4CAF50, #388E3C); color: white; padding: 20px; border-radius: 10px; text-align: center; margin: 10px;">
-              <h3 style="font-size: 28px; margin-bottom: 10px;">11</h3>
-              <p style="font-size: 16px;">intervenants</p>
-              <small style="font-size: 12px;">experts en IA</small>
-            </div>
+        <!-- Speakers -->
+        <div class="col-md-4">
+          <div style="background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 30px; text-align: center; height: 100%; margin-bottom: 20px; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #4CAF50, #388E3C);"></div>
+            <i class="ion-ios-mic-outline" style="font-size: 48px; color: #4CAF50; margin-bottom: 20px;"></i>
+            <h3 style="font-size: 36px; font-weight: 700; color: #333; margin-bottom: 10px;">10</h3>
+            <p style="font-size: 18px; color: #666; margin-bottom: 5px;">Intervenants</p>
+            <small style="color: #888; display: block;">Experts en IA</small>
+          </div>
+        </div>
 
-            <!-- Tutorials Card -->
-            <div class="col-sm-2 stat-card" style="background: linear-gradient(135deg, #1565C0, #0D47A1); color: white; padding: 20px; border-radius: 10px; text-align: center; margin: 10px;">
-              <h3 style="font-size: 28px; margin-bottom: 10px;">4+</h3>
-              <p style="font-size: 16px;">tutoriels</p>
-              <small style="font-size: 12px;">sessions pratiques</small>
-            </div>
+        <!-- Activities -->
+        <div class="col-md-4">
+          <div style="background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 30px; text-align: center; height: 100%; margin-bottom: 20px; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #FF9800, #F57C00);"></div>
+            <i class="ion-ios-lightbulb-outline" style="font-size: 48px; color: #FF9800; margin-bottom: 20px;"></i>
+            <h3 style="font-size: 36px; font-weight: 700; color: #333; margin-bottom: 10px;">15+</h3>
+            <p style="font-size: 18px; color: #666; margin-bottom: 5px;">Activités</p>
+            <small style="color: #888; display: block;">Présentations, tutoriels et hackathon</small>
+          </div>
+        </div>
+      </div>
 
-            <!-- Posters Card -->
-            <div class="col-sm-2 stat-card" style="background: linear-gradient(135deg, #F44336, #D32F2F); color: white; padding: 20px; border-radius: 10px; text-align: center; margin: 10px;">
-              <h3 style="font-size: 28px; margin-bottom: 10px;">10+</h3>
-              <p style="font-size: 16px;">posters</p>
-              <small style="font-size: 12px;">présentations de recherches</small>
+      <!-- Additional Features -->
+      <div class="row mt-4">
+        <div class="col-md-3">
+          <div style="text-align: center; padding: 20px;">
+            <div style="background: linear-gradient(135deg, #1565C0, #0D47A1); color: white; width: 60px; height: 60px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+              <i class="ion-ios-book-outline" style="font-size: 30px;"></i>
             </div>
+            <h4 style="font-size: 18px; color: #333; margin-bottom: 10px;">4+ Tutoriels</h4>
+            <p style="font-size: 14px; color: #666;">Sessions pratiques de formation</p>
+          </div>
+        </div>
 
-            <!-- Hackathon Card -->
-            <div class="col-sm-2 stat-card" style="background: linear-gradient(135deg, #FF9800, #F57C00); color: white; padding: 20px; border-radius: 10px; text-align: center; margin: 10px;">
-              <h3 style="font-size: 28px; margin-bottom: 10px;">1</h3>
-              <p style="font-size: 16px;">hackathon</p>
-              <small style="font-size: 12px;">compétition d'IA</small>
+        <div class="col-md-3">
+          <div style="text-align: center; padding: 20px;">
+            <div style="background: linear-gradient(135deg, #F44336, #D32F2F); color: white; width: 60px; height: 60px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+              <i class="ion-ios-paper-outline" style="font-size: 30px;"></i>
             </div>
+            <h4 style="font-size: 18px; color: #333; margin-bottom: 10px;">10+ Posters</h4>
+            <p style="font-size: 14px; color: #666;">Présentations de recherches</p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div style="text-align: center; padding: 20px;">
+            <div style="background: linear-gradient(135deg, #FF9800, #F57C00); color: white; width: 60px; height: 60px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+              <i class="ion-ios-game-controller-b-outline" style="font-size: 30px;"></i>
+            </div>
+            <h4 style="font-size: 18px; color: #333; margin-bottom: 10px;">Hackathon</h4>
+            <p style="font-size: 14px; color: #666;">Compétition d'IA pratique</p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div style="text-align: center; padding: 20px;">
+            <div style="background: linear-gradient(135deg, #4CAF50, #388E3C); color: white; width: 60px; height: 60px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 15px;">
+              <i class="ion-ios-world-outline" style="font-size: 30px;"></i>
+            </div>
+            <h4 style="font-size: 18px; color: #333; margin-bottom: 10px;">Networking</h4>
+            <p style="font-size: 14px; color: #666;">Opportunités de collaboration</p>
           </div>
         </div>
       </div>
@@ -174,7 +228,7 @@
                 style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
             </figure>
             <h4>Prof Abdoulaye Banire Diallo</h4>
-            <p>Professeur en bioinformatique et intelligenceartificielle à l'UQAM. Directeur du laboratoire de
+            <p>Professeur en bioinformatique et intelligence artificielle à l'UQAM. Directeur du laboratoire de
               bioinformatique de l'UQAM et co-titulaire de la Chaire
               de Recherche-Innovation McGill-UQAM sur le Bien-être animal et l'intelligence artificielle (WELL-E).</p>
             <ul class="social-block">
@@ -186,10 +240,166 @@
           </div>
         </div>
 
-        <!-- Copy all other speakers here -->
-        // ...existing speakers code...
+        <div class="col-md-4">
+          <div class="speaker">
+            <figure>
+              <img alt="" class="img-responsive center-block" src="assets/images/speakers/gayo.jpeg"
+                style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+            </figure>
+            <h4>Prof Gayo Diallo</h4>
+            <p>Full Professor in Computer Sciences/Digital Health, ISPED, Univ of Bordeaux
+              Deputy Director AHeaD research group</p>
+            <ul class="social-block">
+              <li><a href="https://x.com/gayodiallo"><i class="ion-social-twitter"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/gayo-diallo-2b43ba29/"><i
+                    class="ion-social-linkedin-outline"></i></a></li>
+            </ul>
+          </div>
+        </div>
 
+        <div class="col-md-4">
+          <div class="speaker">
+            <figure>
+              <img alt="" class="img-responsive center-block" src="assets/images/speakers/momo.jpeg"
+                style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+            </figure>
+            <h4>Fodé Momo Bangoura</h4>
+            <p>Entrepreneur | Consultant en Transformation Digitale | Product Designer | Co-Founder @NimbaSolution x
+              NimbaSMS x NimbaHub</p>
+            <ul class="social-block">
+              <li><a href="https://x.com/fmbangoura7"><i class="ion-social-twitter"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/fodé-momo-bangoura-902309a8/"><i
+                    class="ion-social-linkedin-outline"></i></a></li>
+            </ul>
+          </div>
+        </div>
       </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="speaker">
+            <figure>
+              <img alt="" class="img-responsive center-block" src="assets/images/speakers/keynote.JPG"
+                style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+            </figure>
+            <h4>Aminata Deen Toure</h4>
+            <p>Directrice générale de l'Innovation du MESRS</p>
+            <ul class="social-block">
+              <li><a href="https://www.linkedin.com/in/aminata-deen-t-25a04a4a"><i
+                    class="ion-social-linkedin-outline"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="speaker">
+            <figure>
+              <img alt="" class="img-responsive center-block" src="assets/images/speakers/sagno.jpg"
+                style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+            </figure>
+            <h4>Ibrahima SAGNO</h4>
+            <p>Consultant Data Scientist</p>
+            <ul class="social-block">
+              <li><a href="https://www.linkedin.com/in/ibrahima-sagno-8aa013117/"><i
+                    class="ion-social-linkedin-outline"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="speaker">
+            <figure>
+              <img alt="" class="img-responsive center-block" src="assets/images/speakers/bangoura.jpeg"
+                style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+            </figure>
+            <h4>Mamadou Moussa Bangoura</h4>
+            <p>Consultant data engineer au compte de Atos Sénégal pour le groupe la poste (France) et formateur en Data science</p>
+            <ul class="social-block">
+              <li><a href="https://www.linkedin.com/in/mamadou-moussa-bangoura-b92127199/"><i
+                    class="ion-social-linkedin-outline"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="speaker">
+            <figure>
+              <img alt="" class="img-responsive center-block" src="assets/images/speakers/binta.jpeg"
+                style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+            </figure>
+            <h4>Fatoumata Binta Barry</h4>
+            <p>Ingénieur formatrice à Orange Digital Center || Data Engineer</p>
+            <ul class="social-block">
+              <li><a href="https://www.linkedin.com/in/fatoumata-binta-barry-b25628183/"><i
+                    class="ion-social-linkedin-outline"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="speaker">
+            <figure>
+              <img alt="" class="img-responsive center-block" src="assets/images/speakers/Sp.png"
+                style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+            </figure>
+            <h4>Mazoughou Goépogui</h4>
+            <p>Enseignant chercheur, CEO de Magoé technologie</p>
+            <ul class="social-block">
+              <li><a href="https://www.linkedin.com/in/mazoughou-goépogui-108988147/"><i
+                    class="ion-social-linkedin-outline"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="speaker">
+            <figure>
+              <img alt="" class="img-responsive center-block" src="assets/images/speakers/pathe.jpeg"
+                style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+            </figure>
+            <h4>Mamadou Pathe Ly</h4>
+            <p>PhD in Stochastic Analysis & AI engineer, Postgraduate Researcher at Imperial College London</p>
+            <ul class="social-block">
+              <li><a href="https://www.linkedin.com/in/mamadou-pathe-ly-ba3791174/"><i
+                    class="ion-social-linkedin-outline"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="speaker">
+            <figure>
+              <img alt="" class="img-responsive center-block" src="assets/images/speakers/abdiallo.jpeg"
+                style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+            </figure>
+            <h4>Aboubacar Diallo</h4>
+            <p>Technical Advisor - Health Intelligence - Tech4Good - Data Specialist</p>
+            <ul class="social-block">
+              <li><a href="https://www.linkedin.com/in/daboubacar/"><i class="ion-social-linkedin-outline"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="speaker">
+            <figure>
+              <img alt="" class="img-responsive center-block" src="assets/images/speakers/harouna.jpeg"
+                style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+            </figure>
+            <h4>Harouna Diallo</h4>
+            <p>Senior Software Developer</p>
+            <ul class="social-block">
+              <li><a href="https://x.com/vhostb"><i class="ion-social-twitter"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/harouna-gn/"><i class="ion-social-linkedin-outline"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -231,8 +441,165 @@
             <h3>Cérémonie d'Ouverture(Event launch and opening remarks)</h3>
           </div>
         </div>
-        <!-- Copy rest of the schedule here -->
-        // ...existing schedule code...
+        <div class="schedule-item">
+          <div class="time">
+            <time datetime="09:30">09:30 am</time> - <time datetime="10:15">10:15 am</time>
+          </div>
+          <div class="details">
+            <h3>Réinventer le métier de l'enseignant à travers l'IA</h3>
+            <p>MAZOUGHOU GOEPOGUI</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="time">
+            <time datetime="10:30">10:30 am</time> - <time datetime="12:20">12:20 pm</time>
+          </div>
+          <div class="details">
+            <h3>Data preprocessing ou pre-traitement des données (pratique sous python)</h3>
+            <p>MAMADOU PATHE LY</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="time">
+            <time datetime="12:30">12:30 pm</time> - <time datetime="13:30">13:30 pm</time>
+          </div>
+          <div class="details">
+            <h3>Architecturer des Bots Conversationnels Contextualisés : Conception d'une Pipeline de Données et Intégration de Modèles LLM</h3>
+            <p>Harouna Diallo</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="time">
+            <time datetime="13:35">13:35 pm</time> - <time datetime="13:40">13:40 pm</time>
+          </div>
+          <div class="details">
+            <h3>Lancement du Hackathon(competition)</h3>
+            <p>Abdoulaye Balde</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="time">
+            <time datetime="13:40">13:40 pm</time> - <time datetime="14:15">14:15 pm</time>
+          </div>
+          <div class="details">
+            <h3>Pause Déjeuner (Lunch Break)</h3>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="time">
+            <time datetime="14:20">14:20 pm</time> - <time datetime="15:45">15:45 pm</time>
+          </div>
+          <div class="details">
+            <h3>Keynote Speaker</h3>
+            <p>Prof Abdoulaye Banire Diallo</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="time">
+            <time datetime="15:55">15:55 pm</time> - <time datetime="17:00">17:00 pm</time>
+          </div>
+          <div class="details">
+            <h3>Machine Learning : Algorithmes et explicabilité</h3>
+            <p>Ibrahima SAGNO</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="time">
+            <time datetime="17:00">17:00 pm</time> - <time datetime="17:10">17:10 pm</time>
+          </div>
+          <div class="details">
+            <h3>Closing remarks</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="schedule-day">
+        <h3>Day 2 - Dimanche</h3>
+        <div class="schedule-item">
+          <div class="time">
+            <time datetime="08:00">8:00 am</time> - <time datetime="08:30">08:30 am</time>
+          </div>
+          <div class="details">
+            <h3>Accueil des participants(Inscription et petit déjeuner)</h3>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="time">
+            <time datetime="8:35">8:30 am</time> - <time datetime="8:35">8:35 am</time>
+          </div>
+          <div class="details">
+            <h3>Cérémonie d'Ouverture(Event launch and opening remarks)</h3>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="time">
+            <time datetime="8:35">8:35 am</time> - <time datetime="10:30">10:30 am</time>
+          </div>
+          <div class="details">
+            <h3>Atelier pratique sur l'architecture des CNN, avec un focus sur la classification des déchets.</h3>
+            <p>Mamadou Moussa Bangoura</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="time">
+            <time datetime="10:35">10:35 am</time> - <time datetime="11:45">11:45 pm</time>
+          </div>
+          <div class="details">
+            <h3>Atelier pratique dédié à la vision par ordinateur(computer vision)</h3>
+            <p>Mamoudou Sylla</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="time">
+            <time datetime="12:00">12:00 pm</time> - <time datetime="13:30">1:30 pm</time>
+          </div>
+          <div class="details">
+            <h3>Intelligence Artificielle appliquée dans le domaine la Santé</h3>
+            <p>prof Gayo Diallo</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="time">
+            <time datetime="13:30">13:30 pm</time> - <time datetime="14:15">14:15 pm</time>
+          </div>
+          <div class="details">
+            <h3>Pause Déjeuner</h3>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="time">
+            <time datetime="14:20">14:20 pm</time> - <time datetime="15:45">15:45 pm</time>
+          </div>
+          <div class="details">
+            <h3>Données et éducation : Comment l'IA et le machine learning transforment l'apprentissage</h3>
+            <p>Fatoumata Binta Barry</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="time">
+            <time datetime="15:50">15:50 pm</time> - <time datetime="15:55">16:45 pm</time>
+          </div>
+          <div class="details">
+            <h3>Low Code, No Code, AutoML</h3>
+            <p>Aboubacar Diallo</p>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="time">
+            <time datetime="16:50">16:50 pm</time> - <time datetime="17:00">17:00 pm</time>
+          </div>
+          <div class="details">
+            <h3>Award Winners Presentations and closing ceremony</h3>
+          </div>
+        </div>
+        <div class="schedule-item">
+          <div class="time">
+            <time datetime="17:00">17:00 pm</time> - <time datetime="17:15">17:15 pm</time>
+          </div>
+          <div class="details">
+            <h3>IndabaX Guinee Picture</h3>
+          </div>
+        </div>
       </div>
     </div>
   </section>
