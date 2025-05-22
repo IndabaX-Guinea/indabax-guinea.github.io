@@ -266,8 +266,8 @@ ul li {
 .navbar-custom {
   border: 0;
   margin: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px; /* Increased padding */
+  padding-bottom: 15px;
   background-color: #000;
   -webkit-transition: all 0.2s linear 0s;
   transition: all 0.2s linear 0s;
@@ -278,8 +278,9 @@ ul li {
 .navbar-custom .navbar-nav > li > a {
   color: #fff;
   text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 16px; /* Increased from 12px */
+  font-weight: 500; /* Increased from 400 for better visibility */
+  padding: 10px 20px; /* Added more padding for better clickable area */
   border-bottom: 1px solid transparent;
 }
 .navbar-custom .navbar-nav > li > a:focus,
@@ -310,7 +311,7 @@ ul li {
 .site-branding {
   float: left;
   margin-top: 0;
-  margin-left: 10px;
+  margin-left: 30px; /* Increased left margin */
 }
 .site-branding .logo {
   color: #fff;
@@ -323,6 +324,11 @@ ul li {
 .site-branding .logo:focus,
 .site-branding .logo:hover {
   text-decoration: none;
+}
+.site-branding .logo img {
+  width: 200px; /* Set a specific width */
+  height: auto;
+  margin-top: -5px; /* Adjust vertical alignment */
 }
 
 /* 
@@ -451,18 +457,31 @@ ul li {
 }
 
 #countdown {
-  font-size: 2em;
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+  font-family: Arial, sans-serif;
 }
 
-#countdown span {
-  display: inline-block;
-  min-width: 80px;
-  background: #222;
+.countdown-item {
+  text-align: center;
+  min-width: 120px;
+}
+
+.countdown-item span {
+  font-size: 72px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
   color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 0 5px;
+}
+
+.countdown-item p {
+  font-size: 20px;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 /* 
@@ -696,32 +715,36 @@ ul li {
 }
 
 .dropbtn {
-  background-color: #000;
-  color: white;
-  padding: 16px;
+  color: #fff;
+  text-transform: uppercase;
   font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
+  background: transparent;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #000;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
 }
 
 .dropdown-content a {
-  color: black;
+  color: #fff !important;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: #333;
 }
 
 .dropdown:hover .dropdown-content {
@@ -729,5 +752,129 @@ ul li {
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Update header styles for the new design */
+header h1 {
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header h2 {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+/* Styles for the ticket button */
+.ticket-button-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.ticket-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  padding: 20px 60px;
+  border-radius: 50px;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ticket-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-decoration: none;
+}
+
+.ticket-button:active {
+  transform: translateY(1px);
+}
+
+.ticket-text {
+  margin-right: 10px;
+}
+
+.ticket-icon {
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .ticket-button {
+    padding: 15px 40px;
+    font-size: 20px;
+  }
+}
+
+/* Enhanced styles for Hackathon section */
+.hackathon-description {
+  font-size: 20px;
+  color: #fff;
+  margin: 30px auto;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.hackathon-button-container {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.hackathon-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+  color: white;
+  padding: 20px 60px;
+  border-radius: 50px;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hackathon-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+.hackathon-button:active {
+  transform: translateY(1px);
+}
+
+.hackathon-text {
+  margin-right: 10px;
+}
+
+.hackathon-icon {
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .hackathon-button {
+    padding: 15px 40px;
+    font-size: 20px;
+  }
+  
+  .hackathon-description {
+    font-size: 18px;
+    padding: 0 20px;
+  }
 }
