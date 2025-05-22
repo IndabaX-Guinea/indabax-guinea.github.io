@@ -618,6 +618,193 @@ ul li {
   margin-top: 10px;
 }
 
+/* Schedule Styles */
+.schedule-nav {
+  margin-bottom: 40px;
+}
+
+.schedule-nav .nav-pills {
+  display: inline-flex;
+  background: #f5f5f5;
+  padding: 5px;
+  border-radius: 30px;
+}
+
+.schedule-nav .nav-pills > li > a {
+  padding: 10px 30px;
+  color: #666;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.schedule-nav .nav-pills > li.active > a {
+  background: #4CAF50;
+  color: white;
+}
+
+.day-title {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.day-date {
+  display: block;
+  font-size: 14px;
+  color: inherit;
+  opacity: 0.8;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: #e0e0e0;
+}
+
+.timeline-block {
+  position: relative;
+  margin: 30px 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #4CAF50;
+  z-index: 1;
+}
+
+.timeline-dot.lunch {
+  background: #FF9800;
+}
+
+.schedule-card {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.schedule-card:hover {
+  transform: translateY(-5px);
+}
+
+.schedule-card.featured {
+  border: 2px solid #4CAF50;
+}
+
+.schedule-card.lunch-card {
+  background: #FFF3E0;
+}
+
+.card-header {
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header .time {
+  color: #666;
+  font-weight: 500;
+}
+
+.card-header .session-type {
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #4CAF50;
+  color: white;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-weight: 600;
+}
+
+.session-desc {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.speaker-info {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.speaker-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.speaker-details h5 {
+  margin: 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.speaker-details p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline-dot {
+    left: 30px;
+  }
+  
+  .schedule-card {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+  }
+  
+  .schedule-nav .nav-pills {
+    flex-direction: column;
+    padding: 0;
+  }
+  
+  .schedule-nav .nav-pills > li > a {
+    margin: 5px 0;
+  }
+}
+
 /* 
  * 6.7 Section: Schedule
  */
