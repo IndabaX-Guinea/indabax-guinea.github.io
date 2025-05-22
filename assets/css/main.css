@@ -395,6 +395,28 @@ ul li {
   background-color: #fff;
 }
 
+.nav-register-btn {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 50px;
+}
+
+.nav-register-btn:hover,
+.nav-register-btn:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
 @media (max-width: 767px) {
   .navbar-custom {
     padding: 10px 0;
