@@ -263,111 +263,137 @@ ul li {
 /* 
  * 4.0 Navigation
  */
+/* Navigation Bar Styles */
 .navbar-custom {
+  background-color: rgba(0, 0, 0, 0.95);
   border: 0;
   margin: 0;
-  padding-top: 15px; /* Increased padding */
-  padding-bottom: 15px;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-custom.navbar-solid {
   background-color: #000;
-  -webkit-transition: all 0.2s linear 0s;
-  transition: all 0.2s linear 0s;
+  padding: 10px 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease forwards;
 }
-.navbar-custom .navbar-nav li {
-  margin: 0;
+
+.navbar-custom .navbar-nav > li {
+  animation: slideIn 0.5s ease forwards;
+  opacity: 0;
+  animation-delay: calc(var(--item-index) * 0.1s);
 }
+
 .navbar-custom .navbar-nav > li > a {
   color: #fff;
   text-transform: uppercase;
-  font-size: 16px; /* Increased from 12px */
-  font-weight: 500; /* Increased from 400 for better visibility */
-  padding: 10px 20px; /* Added more padding for better clickable area */
-  border-bottom: 1px solid transparent;
-}
-.navbar-custom .navbar-nav > li > a:focus,
-.navbar-custom .navbar-nav > li > a:hover {
-  background-color: transparent;
-  border-color: rgba(255, 255, 255, 0.5);
-}
-.navbar-custom .navbar-nav > .active > a {
-  border-color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  padding: 8px 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.navbar-toggle {
-  border: 0;
-  border-radius: 0;
-  margin-top: 2px;
+.navbar-custom .navbar-nav > li > a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
-.navbar-toggle .icon-bar {
+
+.navbar-custom .navbar-nav > li > a:hover:after {
+  width: 80%;
+}
+
+.navbar-custom .navbar-nav > li > a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.navbar-custom .navbar-nav > .active > a {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-custom .navbar-nav > .active > a:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  animation: slideInFromLeft 0.3s ease forwards;
+}
+
+.navbar-custom .navbar-brand {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.navbar-custom .navbar-toggle {
+  border-color: transparent;
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
   background-color: #fff;
 }
 
-.navbar-solid {
-  background-color: #000 !important;
-  padding: 0 !important;
-  -webkit-transition: all 0.2s linear 0s;
-  transition: all 0.2s linear 0s;
+@media (max-width: 767px) {
+  .navbar-custom {
+    padding: 10px 0;
+  }
+  
+  .navbar-custom .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.95);
+    border: none;
+  }
+  
+  .navbar-custom .navbar-nav > li > a {
+    padding: 10px 20px;
+  }
 }
 
-.site-branding {
-  float: left;
-  margin-top: 0;
-  margin-left: 30px; /* Increased left margin */
-}
-.site-branding .logo {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 700;
-  margin-right: 5px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-.site-branding .logo:focus,
-.site-branding .logo:hover {
-  text-decoration: none;
-}
-.site-branding .logo img {
-  width: 200px; /* Set a specific width */
-  height: auto;
-  margin-top: -5px; /* Adjust vertical alignment */
+/* Navigation Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.nav-register-btn {
-  display: inline-block;
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-  color: white;
-  padding: 8px 25px;
-  border-radius: 50px;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  margin-left: 15px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.nav-register-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  color: white;
-  text-decoration: none;
-}
-
-.nav-register-btn:active {
-  transform: translateY(1px);
-}
-
-/* Make button visible when navbar becomes solid */
-.navbar-solid .nav-register-btn {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-}
-
-@media (max-width: 768px) {
-  .nav-register-btn {
-    margin: 10px 15px;
-    text-align: center;
-    display: inline-block;
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
 
