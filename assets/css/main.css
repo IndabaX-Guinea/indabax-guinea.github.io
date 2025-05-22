@@ -1207,193 +1207,270 @@ ul li {
  * 7.0 Site-footer
  */
 .site-footer {
-  background-color: #000;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   color: #fff;
-  text-align: center;
-  padding: 30px 0;
-}
-.site-footer .site-info {
-  font-weight: 400;
-  margin-bottom: 10px;
-}
-.site-footer .site-info a {
-  color: #fff;
-}
-.site-footer .social-block li a {
-  color: #fff;
-}
-.site-footer .social-block li a:hover,
-.site-footer .social-block li a:focus {
-  opacity: 0.8;
-}
-
-/* Custom styles for Archives dropdown */
-.dropdown {
+  padding: 0;
   position: relative;
-  display: inline-block;
+  overflow: hidden;
 }
 
-.dropbtn {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  background: transparent;
-}
-
-.dropdown-content {
-  display: none;
+.site-footer::before {
+  content: '';
   position: absolute;
-  background-color: #000;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
 }
 
-.dropdown-content a {
-  color: #fff !important;
-  padding: 12px 16px;
+.footer-top {
+  padding: 60px 0 30px;
+  position: relative;
+}
+
+.footer-top::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-info {
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.footer-brand-img {
+  height: 60px;
+  width: auto;
+}
+
+.footer-description {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+.footer-links {
+  margin-bottom: 30px;
+}
+
+.footer-links h4 {
+  position: relative;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+}
+
+.footer-links h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  padding: 7px 0;
+  margin: 0;
+}
+
+.footer-links ul li a {
+  color: #aaa;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.footer-links ul li a i {
+  font-size: 12px;
+  margin-right: 10px;
+  color: #6366f1;
+  transition: transform 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+  padding-left: 5px;
   text-decoration: none;
-  display: block;
-  text-transform: uppercase;
+}
+
+.footer-links ul li a:hover i {
+  transform: translateX(5px);
+}
+
+.footer-contact {
+  margin-bottom: 30px;
+}
+
+.footer-contact h4 {
+  position: relative;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+}
+
+.footer-contact h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  transform: translateY(-3px);
+}
+
+.footer-newsletter {
+  margin-top: 30px;
+}
+
+.footer-newsletter h5 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.newsletter-form {
+  position: relative;
+  max-width: 300px;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 12px 45px 12px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #6366f1;
+  outline: none;
+}
+
+.newsletter-form button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
+  width: 35px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  transform: translateX(3px);
+}
+
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px 0;
   font-size: 14px;
 }
 
-.dropdown-content a:hover {
-  background-color: #333;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  border-color: rgba(255, 255, 255, 0.5);
-}
-
-/* Update header styles for the new design */
-header h1 {
-  font-size: 48px;
-  color: #fff;
-  margin-bottom: 20px;
-  line-height: 1.2;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-header h2 {
-  font-size: 32px;
-  color: #fff;
-  margin-bottom: 40px;
-}
-
-/* Styles for the ticket button */
-.ticket-button-container {
-  margin-top: 50px;
+.copyright {
+  margin: 0;
   text-align: center;
+  color: #aaa;
 }
 
-.ticket-button {
-  display: inline-block;
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-  color: white;
-  padding: 20px 60px;
-  border-radius: 50px;
-  font-size: 24px;
-  font-weight: 600;
-  text-transform: uppercase;
+.copyright strong {
+  color: #fff;
+}
+
+.credits {
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+.credits a {
+  color: #6366f1;
+  transition: color 0.3s ease;
+}
+
+.credits a:hover {
+  color: #8b5cf6;
   text-decoration: none;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.ticket-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  color: white;
-  text-decoration: none;
-}
-
-.ticket-button:active {
-  transform: translateY(1px);
-}
-
-.ticket-text {
-  margin-right: 10px;
-}
-
-.ticket-icon {
-  font-size: 24px;
 }
 
 @media (max-width: 768px) {
-  .ticket-button {
-    padding: 15px 40px;
-    font-size: 20px;
-  }
-}
-
-/* Enhanced styles for Hackathon section */
-.hackathon-description {
-  font-size: 20px;
-  color: #fff;
-  margin: 30px auto;
-  max-width: 800px;
-  line-height: 1.6;
-}
-
-.hackathon-button-container {
-  margin: 40px 0;
-  text-align: center;
-}
-
-.hackathon-button {
-  display: inline-block;
-  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
-  color: white;
-  padding: 20px 60px;
-  border-radius: 50px;
-  font-size: 24px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.hackathon-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  color: white;
-  text-decoration: none;
-}
-
-.hackathon-button:active {
-  transform: translateY(1px);
-}
-
-.hackathon-text {
-  margin-right: 10px;
-}
-
-.hackathon-icon {
-  font-size: 24px;
-}
-
-@media (max-width: 768px) {
-  .hackathon-button {
-    padding: 15px 40px;
-    font-size: 20px;
+  .footer-top {
+    padding: 40px 0 20px;
   }
   
-  .hackathon-description {
-    font-size: 18px;
-    padding: 0 20px;
+  .footer-info,
+  .footer-links,
+  .footer-contact {
+    text-align: center;
+  }
+  
+  .footer-links h4::after,
+  .footer-contact h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .newsletter-form {
+    margin: 0 auto;
   }
 }
