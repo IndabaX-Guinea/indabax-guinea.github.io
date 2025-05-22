@@ -8,6 +8,7 @@
 html {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -95,9 +96,11 @@ ul li {
 
 .btn {
   border: 0;
-  border-radius: 0;
-  padding: 6px 28px;
+  border-radius: 50px;
+  padding: 12px 30px;
   text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
@@ -107,11 +110,29 @@ ul li {
   transition-duration: 0.3s;
   -webkit-transition-property: -webkit-transform;
   transition-property: transform;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+.btn:hover::before {
+  opacity: 1;
 }
 .btn:hover {
-  -webkit-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  transform: scale(0.9);
+  color: #fff;
+  transform: scale(0.9) translateY(-2px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
 }
 
 .form-control {
@@ -140,15 +161,37 @@ ul li {
 }
 
 .section {
-  padding: 70px 0;
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
+}
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(99, 102, 241, 0.2), transparent);
 }
 
 .section-title {
   color: #313131;
-  letter-spacing: 1px;
-  margin: 0 0 20px;
+  letter-spacing: 2px;
+  margin: 0 0 60px;
   text-transform: uppercase;
   text-align: center;
+  position: relative;
+  font-size: 32px;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  margin: 20px auto 0;
+  border-radius: 2px;
 }
 
 /* 
@@ -398,7 +441,7 @@ ul li {
 }
 
 /* 
- * 5.0 Site Header
+ * 5.0 Site Header 
  */
 .site-header {
   width: 100%;
@@ -407,8 +450,11 @@ ul li {
   position: relative;
   text-align: center;
   background: url(../images/backgrounds/walp.jpeg) no-repeat center center/cover;
+  background-attachment: fixed; /* Parallax effect */
   display: table;
+  overflow: hidden;
 }
+
 .site-header::before {
   content: '';
   position: absolute;
@@ -416,33 +462,220 @@ ul li {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%);
+  z-index: 1;
 }
+
 .site-header .intro {
   color: #fff;
   position: relative;
   text-align: center;
-  text-transform: uppercase;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   padding: 0 15px;
   display: table-cell;
   vertical-align: middle;
   height: 100vh;
+  animation: fadeInUp 1s ease-out;
 }
+
 .site-header .intro h2 {
   margin-top: 0px;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: slideInLeft 1s ease-out;
 }
+
 .site-header .intro h1 {
   margin-top: 0px;
-  font-size: 30px;
+  font-size: 42px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  animation: slideInRight 1s ease-out;
 }
+
 .site-header .intro p {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   font-weight: 300;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Modern Countdown Styles */
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.countdown-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 120px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.countdown-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.countdown-item span {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+  line-height: 1;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.countdown-item p {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Modern Registration Button */
+.ticket-button-container {
+  margin-top: 40px;
+  animation: fadeInUp 1.4s ease-out;
+}
+
+.ticket-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ticket-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ticket-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+  color: #fff;
+  text-decoration: none;
+}
+
+.ticket-button:hover::before {
+  opacity: 1;
+}
+
+.ticket-text {
+  position: relative;
+  z-index: 1;
+  margin-right: 10px;
+}
+
+.ticket-icon {
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .site-header .intro h1 {
+    font-size: 32px;
+  }
+  
+  .site-header .intro h2 {
+    font-size: 24px;
+  }
+  
+  #countdown {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .countdown-item {
+    min-width: calc(50% - 10px);
+    padding: 15px;
+  }
+  
+  .countdown-item span {
+    font-size: 36px;
+  }
+  
+  .ticket-button {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -487,24 +720,57 @@ ul li {
  */
 .speaker {
   text-align: center;
-  color: #313131;
-  text-transform: uppercase;
   margin: 25px 0;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+.speaker:hover {
+  transform: translateY(-10px);
+}
+.speaker img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.speaker:hover img {
+  box-shadow: 0 15px 30px rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.1);
 }
 .speaker h4 {
-  margin-top: 15px;
+  margin-top: 20px;
   margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2d3748;
 }
 .speaker p {
   margin-bottom: 5px;
+  color: #6366f1;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-.speaker img:hover {
-  opacity: 0.7;
+.speaker .social-block {
+  margin-top: 15px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
 }
-.speaker img {
-  width: 100%;
-  height: 300px; /* Set the desired fixed height */
-  object-fit: cover; /* This ensures the image covers the area while maintaining aspect ratio */
+.speaker:hover .social-block {
+  opacity: 1;
+  transform: translateY(0);
+}
+.speaker .social-block li a {
+  color: #6366f1;
+  transition: all 0.3s ease;
+}
+.speaker .social-block li a:hover {
+  color: #8b5cf6;
+  transform: translateY(-3px);
 }
 
 /* 
